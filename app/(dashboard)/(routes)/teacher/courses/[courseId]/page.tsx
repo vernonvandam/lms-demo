@@ -10,6 +10,7 @@ import { ImageForm } from "./_components/image-form";
 import { CategoryForm } from "./_components/category-form";
 import { PriceForm } from "./_components/price-form";
 import { AttachmentForm } from "./_components/attachment-form";
+import { ChaptersForm } from "./_components/chapters-form";
 
 
 const CourseIdPage = async ({ params }: { params: { courseId: string } }) => {
@@ -22,8 +23,14 @@ const CourseIdPage = async ({ params }: { params: { courseId: string } }) => {
   const course = await db.course.findUnique({
     where: {
       id: params.courseId,
+      userId
     },
     include: {
+        chapters: {
+            orderBy: {
+               position: "asc", 
+            },
+        },
         attachments: {
             orderBy: {
                 createdAt: "desc",
@@ -47,7 +54,8 @@ const requiredFields = [
     course.description,
     course.imageUrl,
     course.price,
-    course.categoryId
+    course.categoryId,
+    course.chapters.some(chapter => chapter.isPublished),
 ];
 
 const totalFields = requiredFields.length;
@@ -55,23 +63,11 @@ const completedFields = requiredFields.filter(Boolean).length;
 
 const completionText = `(${completedFields}/${totalFields})`
 
-
-
-
-
-
-
-
-
-
-
-
-
   return (
   <div className="p-6">
     <div className="flex items-center justify-between">
         <div className="flex flex-col gap-y-2">
-            <h1 className="test-2xl font-medium">
+            <h1 className="text-2xl font-medium">
                 Course setup
             </h1>
             <span className="text-sm text-slate-700">
@@ -117,9 +113,10 @@ const completionText = `(${completedFields}/${totalFields})`
                         Course chapters
                     </h2>
                 </div>
-                <div>
-                    TODO: Chapters
-                </div>
+                <ChaptersForm 
+                initialData={course}
+                courseId={course.id}
+            />
             </div>
 
              <div className="flex items-center gap-x-2">

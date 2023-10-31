@@ -6,7 +6,7 @@ export default function Home() {
     <p className='text-3xl font-medium text-sky-700'>
       protected page
     </p>
-    <UserButton afterSignOutUrl="/"/>
+
     </div>
   )
 }

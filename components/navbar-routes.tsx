@@ -6,8 +6,9 @@ import { LogOut } from "lucide-react";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import { SearchInput } from "../search-input";
 import { isTeacher } from "@/lib/teacher";
+
+import { SearchInput } from "./search-input";
 
 export const NavbarRoutes = () => {
   const { userId } = useAuth();

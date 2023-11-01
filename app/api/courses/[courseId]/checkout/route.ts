@@ -3,7 +3,7 @@ import { currentUser } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 
 import { db } from "@/lib/db";
-// import { stripe } from "@/lib/stripe";
+import { stripe } from "@/lib/stripe";
 
 export async function POST(
   req: Request,

@@ -12,15 +12,15 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 
 ## Uses
-NextJS. <br />
-Tailwinds. <br />
-Shadcn-UI. <br />
-Prisma - db interface. <br />
-Planetscale - MySQL db [https://planetscale.com/](https://planetscale.com/). <br />
-Uploadthing - uploading of images [https://uploadthing.com/](https://uploadthing.com/). <br />
-Clerk - authentication [https://clerk.com/](https://clerk.com/). <br />
-MUX - video player [https://www.mux.com/](https://www.mux.com/). <br />
-Stripe - payment gateway [https://stripe.com/](https://stripe.com/). <br />
+NextJS <br />
+Tailwinds <br />
+Shadcn-UI <br />
+Prisma - db interface <br />
+Planetscale - MySQL db [https://planetscale.com/](https://planetscale.com/) <br />
+Uploadthing - uploading of images [https://uploadthing.com/](https://uploadthing.com/) <br />
+Clerk - authentication [https://clerk.com/](https://clerk.com/) <br />
+MUX - video player [https://www.mux.com/](https://www.mux.com/) <br />
+Stripe - payment gateway [https://stripe.com/](https://stripe.com/) <br />
 
 ## Deploy
 Create an .env file, from the .env.sample 

@@ -13,8 +13,18 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Learn More
 
-
+# Uses:
+NextJS
+Tailwinds
+Shadcn-UI
+Prisma - db interface
+Planetscale - MySQL db [https://planetscale.com/](https://planetscale.com/)
+Clerk - authentication [https://clerk.com/](https://clerk.com/)
+MUX - video player [https://www.mux.com/](https://www.mux.com/)
+Stripe - payment gateway [https://stripe.com/](https://stripe.com/)
 
 ## Deploy
+Create an .env file, from the .env.sample 
+
 
 
